@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Enviar Email</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffe066 0%, #ffb347 60%, #ff4e50 100%);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            color: #ff4e50;
+            text-align: center;
+            margin-top: 30px;
+        }
+        form {
+            background: #fffbe6;
+            border: 2px solid #ffb347;
+            border-radius: 12px;
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 30px 25px;
+            box-shadow: 0 4px 16px rgba(255, 78, 80, 0.15);
+        }
+        label {
+            color: #ff9800;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="email"], textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ffe066;
+            border-radius: 6px;
+            margin-bottom: 18px;
+            background: #fffde7;
+            font-size: 1em;
+        }
+        button {
+            background: linear-gradient(90deg, #ffb347 60%, #ff4e50 100%);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 22px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #ff4e50 60%, #ffb347 100%);
+        }
+    </style>
+</head>
+<body>
+    <h2>Enviar Email</h2>
+    <form method="POST">
+        <label for="email">Email do destinatário:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao" rows="4" cols="40"></textarea>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
