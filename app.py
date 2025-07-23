@@ -7,7 +7,8 @@ app = Flask(__name__)
 def index():
     if request.method == 'POST':
         email_destinatario = request.form['email']
-        sucesso = enviar_email(email_destinatario)
+        descricao = request.form.get('descricao', '')
+        sucesso = enviar_email(email_destinatario, descricao)
         if sucesso:
             return '''
             <div style="
